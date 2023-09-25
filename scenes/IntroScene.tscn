@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://lgadsexsexbe"]
+[gd_scene load_steps=9 format=3 uid="uid://lgadsexsexbe"]
 
 [ext_resource type="Texture2D" uid="uid://d3kmo5h6n31du" path="res://assets/prototype 3 - krita/layer-exports/Background.PNG" id="1_xtpok"]
 [ext_resource type="Texture2D" uid="uid://dw6qvtgqjl0ms" path="res://assets/prototype 3 - krita/layer-exports/closed closet.PNG" id="2_bthou"]
 [ext_resource type="Texture2D" uid="uid://mblv5serboak" path="res://assets/prototype 3 - krita/layer-exports/young woman mirror.PNG" id="3_donxh"]
 [ext_resource type="Texture2D" uid="uid://djjllr27ie7e7" path="res://assets/600x512.png" id="4_fsskv"]
 [ext_resource type="Script" path="res://scripts/OpenCloset.gd" id="5_nsar7"]
+[ext_resource type="PackedScene" uid="uid://clwe44nem2j8n" path="res://prefabs/film_grain.tscn" id="6_6f3r2"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0pp5l"]
 light_mode = 2
@@ -42,3 +43,5 @@ script = ExtResource("5_nsar7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OpenCloset"]
 position = Vector2(-19.5, -28)
 shape = SubResource("RectangleShape2D_rq07t")
+
+[node name="FilmGrain" parent="." instance=ExtResource("6_6f3r2")]

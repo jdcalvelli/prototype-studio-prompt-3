@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://clwe44nem2j8n"]
+
+[ext_resource type="Texture2D" uid="uid://d123cil7m427h" path="res://assets/noiseTexture-2.png" id="1_og6vd"]
+[ext_resource type="Texture2D" uid="uid://dnc8bo8d6bsfm" path="res://assets/noiseTexture-3.png" id="2_stbkl"]
+[ext_resource type="Texture2D" uid="uid://dj687j6je7ugk" path="res://assets/noiseTexture-4.png" id="3_0jflr"]
+[ext_resource type="Texture2D" uid="uid://c3vrxq74fquiv" path="res://assets/noiseTexture-5.png" id="4_w4057"]
+[ext_resource type="Texture2D" uid="uid://dwvgcwk511e1d" path="res://assets/noiseTexture.png" id="5_q5kct"]
+[ext_resource type="Script" path="res://scripts/AnimatedSprite2D.gd" id="6_1i4uy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7e6gx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_og6vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_stbkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0jflr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w4057")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q5kct")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="FilmGrain" type="AnimatedSprite2D"]
+modulate = Color(1, 1, 1, 0.156863)
+sprite_frames = SubResource("SpriteFrames_7e6gx")
+frame_progress = 0.00430563
+script = ExtResource("6_1i4uy")
