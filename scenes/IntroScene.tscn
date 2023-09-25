@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://lgadsexsexbe"]
+
+[ext_resource type="Texture2D" uid="uid://d3kmo5h6n31du" path="res://assets/prototype 3 - krita/layer-exports/Background.PNG" id="1_xtpok"]
+[ext_resource type="Texture2D" uid="uid://dw6qvtgqjl0ms" path="res://assets/prototype 3 - krita/layer-exports/closed closet.PNG" id="2_bthou"]
+[ext_resource type="Texture2D" uid="uid://mblv5serboak" path="res://assets/prototype 3 - krita/layer-exports/young woman mirror.PNG" id="3_donxh"]
+[ext_resource type="Texture2D" uid="uid://djjllr27ie7e7" path="res://assets/600x512.png" id="4_fsskv"]
+[ext_resource type="Script" path="res://scripts/OpenCloset.gd" id="5_nsar7"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0pp5l"]
+light_mode = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rq07t"]
+size = Vector2(147, 54)
+
+[node name="IntroScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_xtpok")
+
+[node name="Background" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_0pp5l")
+texture = ExtResource("1_xtpok")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("4_fsskv")
+
+[node name="Closet" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_0pp5l")
+texture = ExtResource("2_bthou")
+
+[node name="Young Mirror" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_0pp5l")
+texture = ExtResource("3_donxh")
+
+[node name="OpenCloset" type="Area2D" parent="."]
+script = ExtResource("5_nsar7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpenCloset"]
+position = Vector2(-19.5, -28)
+shape = SubResource("RectangleShape2D_rq07t")

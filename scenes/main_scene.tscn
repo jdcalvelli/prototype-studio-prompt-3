@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://dwr5oph43rk3y"]
+
+[ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_iw465"]
+[ext_resource type="Texture2D" uid="uid://d3kmo5h6n31du" path="res://assets/prototype 3 - krita/layer-exports/Background.PNG" id="1_wilqn"]
+[ext_resource type="Texture2D" uid="uid://ctb0mi45lftwe" path="res://assets/prototype 3 - krita/layer-exports/open closet.PNG" id="2_a4wjb"]
+[ext_resource type="PackedScene" uid="uid://mkfi5y8gjl1v" path="res://prefabs/dress.tscn" id="3_nwy67"]
+[ext_resource type="Texture2D" uid="uid://djjllr27ie7e7" path="res://assets/600x512.png" id="3_okfoc"]
+[ext_resource type="Texture2D" uid="uid://bt0clg4o5loqw" path="res://assets/prototype 3 - krita/layer-exports/blue dress.PNG" id="4_665uc"]
+[ext_resource type="Texture2D" uid="uid://qj7hvcmht81b" path="res://assets/prototype 3 - krita/layer-exports/black dress.PNG" id="5_pa26m"]
+[ext_resource type="Texture2D" uid="uid://do5y7op61sx20" path="res://assets/prototype 3 - krita/layer-exports/green dress.PNG" id="6_lboft"]
+[ext_resource type="Texture2D" uid="uid://hoppa7onnius" path="res://assets/prototype 3 - krita/layer-exports/purple dress.PNG" id="8_lpon1"]
+[ext_resource type="Texture2D" uid="uid://cg1crqlxml5iq" path="res://assets/prototype 3 - krita/layer-exports/yellow dress.PNG" id="9_xb7rs"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_i6iba"]
+light_mode = 2
+
+[node name="MainScene" type="Node2D"]
+position = Vector2(0, -1)
+script = ExtResource("1_iw465")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_wilqn")
+
+[node name="Background" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_i6iba")
+texture = ExtResource("1_wilqn")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("3_okfoc")
+
+[node name="Closet" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("2_a4wjb")
+
+[node name="BlueDress" parent="." instance=ExtResource("3_nwy67")]
+position = Vector2(60, -100)
+texture = ExtResource("4_665uc")
+thisDressNum = 6
+
+[node name="RedDress" parent="." instance=ExtResource("3_nwy67")]
+position = Vector2(60, -100)
+thisDressNum = 5
+
+[node name="BlackDress" parent="." instance=ExtResource("3_nwy67")]
+position = Vector2(60, -100)
+texture = ExtResource("5_pa26m")
+thisDressNum = 4
+
+[node name="GreenDress" parent="." instance=ExtResource("3_nwy67")]
+position = Vector2(60, -100)
+texture = ExtResource("6_lboft")
+thisDressNum = 3
+
+[node name="PurpleDress" parent="." instance=ExtResource("3_nwy67")]
+position = Vector2(60, -100)
+texture = ExtResource("8_lpon1")
+thisDressNum = 2
+
+[node name="YellowDress" parent="." instance=ExtResource("3_nwy67")]
+position = Vector2(60, -100)
+texture = ExtResource("9_xb7rs")
+thisDressNum = 1
