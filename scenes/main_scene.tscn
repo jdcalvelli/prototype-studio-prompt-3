@@ -17,6 +17,8 @@ light_mode = 2
 [node name="MainScene" type="Node2D"]
 position = Vector2(0, -1)
 script = ExtResource("1_iw465")
+aspectRatioTiming = 2
+waitTime = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

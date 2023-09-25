@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpybwh7pvwngp"]
+
+[ext_resource type="Script" path="res://scripts/OutroScene.gd" id="1_p8u6m"]
+[ext_resource type="Texture2D" uid="uid://d3kmo5h6n31du" path="res://assets/prototype 3 - krita/layer-exports/Background.PNG" id="1_y7gwh"]
+[ext_resource type="Texture2D" uid="uid://dw6qvtgqjl0ms" path="res://assets/prototype 3 - krita/layer-exports/closed closet.PNG" id="2_aanhj"]
+[ext_resource type="Texture2D" uid="uid://d37yudbhnddvx" path="res://assets/prototype 3 - krita/layer-exports/old woman mirror.PNG" id="3_7t7p0"]
+
+[node name="OutroScene" type="Node2D"]
+position = Vector2(2, -1)
+script = ExtResource("1_p8u6m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_y7gwh")
+
+[node name="Closet" type="Sprite2D" parent="."]
+texture = ExtResource("2_aanhj")
+
+[node name="Old Mirror" type="Sprite2D" parent="."]
+texture = ExtResource("3_7t7p0")
+
+[node name="Control" type="Control" parent="."]
+modulate = Color(0, 0, 0, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -171.0
+offset_top = -169.0
+offset_right = 62.0
+offset_bottom = -76.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "reminiscence"
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -169.0
+offset_top = -141.0
+offset_right = 64.0
+offset_bottom = -48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "a prototype by
+jd calvelli"

@@ -19,7 +19,7 @@ func _physics_process(delta):
 				-132.0, 
 				70.0
 				),
-			10 * delta
+			0.9 * delta
 		)
 		
 	if !isHeld and position.x <= -120:

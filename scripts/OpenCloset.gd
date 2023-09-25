@@ -5,5 +5,4 @@ func _ready():
 
 func _on_knob_click(viewport:Node, event:InputEvent, shape_idx:int):
 	if event.is_action_pressed("mouse_click"):
-		print("knob slobbed")
 		Events.changeScene.emit("main")
