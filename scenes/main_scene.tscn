@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dwr5oph43rk3y"]
+[gd_scene load_steps=14 format=3 uid="uid://dwr5oph43rk3y"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_iw465"]
 [ext_resource type="Texture2D" uid="uid://d3kmo5h6n31du" path="res://assets/prototype 3 - krita/layer-exports/Background.PNG" id="1_wilqn"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://hoppa7onnius" path="res://assets/prototype 3 - krita/layer-exports/purple dress.PNG" id="8_lpon1"]
 [ext_resource type="Texture2D" uid="uid://cg1crqlxml5iq" path="res://assets/prototype 3 - krita/layer-exports/yellow dress.PNG" id="9_xb7rs"]
 [ext_resource type="PackedScene" uid="uid://clwe44nem2j8n" path="res://prefabs/film_grain.tscn" id="11_nhx7i"]
+[ext_resource type="AudioStream" uid="uid://chkc4t32ifyxi" path="res://sounds/389675__shamewap__closet-door-open-near.wav" id="12_gme6o"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_i6iba"]
 light_mode = 2
@@ -69,3 +70,7 @@ thisDressNum = 1
 
 [node name="FilmGrain" parent="." instance=ExtResource("11_nhx7i")]
 modulate = Color(1, 1, 1, 0.156863)
+
+[node name="OpenCloset" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_gme6o")
+autoplay = true

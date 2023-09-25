@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpybwh7pvwngp"]
+[gd_scene load_steps=6 format=3 uid="uid://cpybwh7pvwngp"]
 
 [ext_resource type="Script" path="res://scripts/OutroScene.gd" id="1_p8u6m"]
 [ext_resource type="Texture2D" uid="uid://d3kmo5h6n31du" path="res://assets/prototype 3 - krita/layer-exports/Background.PNG" id="1_y7gwh"]
 [ext_resource type="Texture2D" uid="uid://dw6qvtgqjl0ms" path="res://assets/prototype 3 - krita/layer-exports/closed closet.PNG" id="2_aanhj"]
 [ext_resource type="Texture2D" uid="uid://d37yudbhnddvx" path="res://assets/prototype 3 - krita/layer-exports/old woman mirror.PNG" id="3_7t7p0"]
+[ext_resource type="AudioStream" uid="uid://c8e2errjryxey" path="res://sounds/489768__nickronk123__closetclose.wav" id="5_2ea1d"]
 
 [node name="OutroScene" type="Node2D"]
 position = Vector2(2, -1)
@@ -46,3 +47,7 @@ offset_bottom = -48.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "a prototype by
 jd calvelli"
+
+[node name="ClosetClose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2ea1d")
+autoplay = true

@@ -6,6 +6,8 @@ var isHeld:bool
 var emitOnce:bool = false
 
 func _ready():
+	$MovingOnRack.stream_paused = true
+	
 	$Area2D.input_event.connect(_on_dress_click)
 	$Area2D.mouse_exited.connect(_on_dress_mouse_exit)
 	
@@ -29,16 +31,20 @@ func _physics_process(delta):
 			print(thisDressNum)
 			Events.activateDress.emit(thisDressNum + 1)
 			emitOnce = true
+			$MovingOnRack.stop()
 	# print(get_global_mouse_position())
 
 func _on_dress_click(viewport:Node, event:InputEvent, shape_idx:int):
 	if event.is_action_pressed("mouse_click"):
 		isHeld = true
+		$MovingOnRack.stream_paused = false
 	elif event.is_action_released("mouse_click"):
 		isHeld = false
+		$MovingOnRack.stream_paused = true
 
 func _on_dress_mouse_exit():
 	isHeld = false
+	$MovingOnRack.stream_paused = true
 
 func _on_activate_dress(dressNum:int):
 	if dressNum == thisDressNum:
